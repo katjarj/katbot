@@ -1,8 +1,14 @@
 from chatterbot import ChatBot
 
-chatbot = ChatBot("KatBot", 
-    #storage_adapter='chatterbot.storage.SQLStorageAdapter'
-)
+chatbot = ChatBot("KatBot",
+    read_only=True,
+    logic_adapters=[
+    {
+        'import_path': 'chatterbot.logic.BestMatch'
+    },
+    ],
+    storage_adapter="chatterbot.storage.SQLStorageAdapter",
+    )
 
 exit_conditions = (":q", "quit", "exit")
 print()
@@ -12,4 +18,4 @@ while True:
         break
     else:
         response = chatbot.get_response(query)
-        print(response)
+        print("👩🏼",response)
