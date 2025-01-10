@@ -5,3 +5,5 @@ To use Katbot, install all the requirements and download all the files in the re
 To quit the bot/trainer programs, simply type in ':q', 'quit', or 'exit'.
 
 Katbot was created using ChatterBot, originally created by Gunther Cox.
+
+NOTE: This is an old project used to experiment with coding. It is not fully functioning.
